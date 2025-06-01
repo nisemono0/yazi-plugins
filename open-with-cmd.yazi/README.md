@@ -1,5 +1,5 @@
 # open-with-cmd.yazi
-Open file(s) with command
+Open file(s) with specified command
 
 ## Installation
 ```sh
