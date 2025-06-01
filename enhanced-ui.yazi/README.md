@@ -1,5 +1,5 @@
 # enhanced-ui.yazi
-Add some ui elements I like having to `yazi` (mimics ranger header)
+Add some ui elements I like having to `yazi`
 
 ## Installation
 ```sh
