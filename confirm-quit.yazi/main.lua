@@ -8,10 +8,10 @@ local function entry()
     local yes = ya.confirm {
         pos = { "center", w = 60, h = 10 },
         title = "Quit?",
-        content = ui.Text("Multiple tabs open. Quit anyway?"):wrap(ui.Text.WRAP),
+        content = ui.Text("Multiple tabs open. Quit anyway?"):wrap(ui.Wrap.YES),
     }
     if yes then
-        ya.mgr_emit("quit", {})
+        ya.emit("quit", {})
     end
 end
 
