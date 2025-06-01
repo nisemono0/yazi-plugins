@@ -12,7 +12,7 @@ function M:peek(job)
     ya.sleep(math.max(0, rt.preview.image_delay / 1000 + start - os.clock()))
 
     local _, err = ya.image_show(url, job.area)
-    ya.preview_widgets(job, {})
+    ya.preview_widget(job, err and ui.Text(tostring(err)):area(job.area):wrap(ui.Wrap.YES))
 end
 
 function M:preload(job)
@@ -22,7 +22,7 @@ function M:preload(job)
     end
 
     local sox_command, code = Command("sox")
-        :args({
+        :arg({
             tostring(job.file.url),
             "-n", "spectrogram",
             "-c", "Yazi (sox)",
