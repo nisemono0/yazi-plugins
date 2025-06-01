@@ -4,9 +4,13 @@ local M = {}
 
 function M:peek(job)
     local start, url = os.clock(), ya.file_cache(job)
-
     if not url or not fs.cha(url) then
-        return require("archive"):peek(job)
+        require("archive"):peek(job)
+    end
+
+    local ok, err = self:preload(job)
+    if not ok or err then
+        return
     end
 
     ya.sleep(math.max(0, rt.preview.image_delay / 1000 + start - os.clock()))
@@ -49,7 +53,7 @@ function M:preload(job)
     job.skip = job.skip >= #filenames and (#filenames - 1) or job.skip
 
     if job.skip == -1 then
-        return true
+        return false, Err("No images in archive")
     end
 
     local extract_output = Command("7z")
@@ -58,7 +62,11 @@ function M:preload(job)
         :stderr(Command.PIPED)
         :output()
 
-    return fs.write(cache, extract_output.stdout) and true or false
+    write_out, write_err = fs.write(cache, extract_output.stdout)
+    if not write_out then
+        return false, Err("Failes to write cache: %s", write_err)
+    end
+    return true
 end
 
 function M:seek() end
