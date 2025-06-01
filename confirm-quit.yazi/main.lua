@@ -2,7 +2,7 @@ local count = ya.sync(function() return #cx.tabs end)
 
 local function entry()
     if count() < 2 then
-        return ya.mgr_emit("quit", {})
+        return ya.emit("quit", {})
     end
 
     local yes = ya.confirm {
