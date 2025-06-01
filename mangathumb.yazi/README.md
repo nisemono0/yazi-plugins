@@ -1,5 +1,5 @@
 # mangathumb.yazi
-Preview images inside `zip` files using `p7zip`
+Preview the first image inside `zip` files using `p7zip`. If not images are found it runs the default previewer for archives.
 
 ## Installation
 ```sh
