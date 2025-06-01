@@ -1,4 +1,4 @@
--- Edited from: https://github.com/navysky12/comicthumb.yazi/blob/main/init.lua
+-- Edited from: https://github.com/navysky12/comicthumb.yazi
 
 local M = {}
 
