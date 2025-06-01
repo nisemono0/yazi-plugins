@@ -29,13 +29,13 @@ local function entry(_, job)
     if action == "next" then
         local next_dirpath = get_parent_dirpath(1)
         if next_dirpath then
-            ya.mgr_emit("cd", { next_dirpath })
+            ya.emit("cd", { next_dirpath })
         end
     end
     if action == "prev" then
         local prev_dirpath = get_parent_dirpath(-1)
         if prev_dirpath then
-            ya.mgr_emit("cd", { prev_dirpath })
+            ya.emit("cd", { prev_dirpath })
         end
     end
 end
