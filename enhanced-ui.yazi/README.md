@@ -7,7 +7,7 @@ ya pkg add nisemono0/yazi-plugins:enhanced-ui
 ```
 
 ## Usage
-Add this to `~/.config/yazi/init.lua`:
+Add this to `init.lua`:
 ```lua
 require("enhanced-ui"):setup()
 ```
