@@ -1,4 +1,5 @@
 -- Edited from: https://github.com/gesellkammer/audio-preview.yazi
+--- @since 25.5.31
 
 local M = {}
 

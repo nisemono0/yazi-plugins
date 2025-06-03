@@ -1,4 +1,5 @@
 -- Edited from: https://github.com/Ape/open-with-cmd.yazi
+--- @since 25.5.31
 
 return {
     entry = function(_, job)

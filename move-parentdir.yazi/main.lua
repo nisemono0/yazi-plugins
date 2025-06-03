@@ -1,3 +1,5 @@
+--- @since 25.5.31
+
 local get_parent_dirpath = ya.sync(function(_, direction)
     local parent = cx.active.parent
 

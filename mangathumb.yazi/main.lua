@@ -1,4 +1,5 @@
 -- Edited from: https://github.com/navysky12/comicthumb.yazi
+--- @since 25.5.31
 
 local M = {}
 

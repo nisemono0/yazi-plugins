@@ -1,3 +1,5 @@
+--- @since 25.5.31
+
 local count = ya.sync(function() return #cx.tabs end)
 
 local function entry()

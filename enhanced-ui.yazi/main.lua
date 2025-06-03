@@ -1,3 +1,5 @@
+--- @since 25.5.31
+
 local function headerfile()
     local h = cx.active.current.hovered
     if h then
