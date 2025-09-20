@@ -8,6 +8,7 @@ List of Yazi plugins
 - [mangathumb.yazi](https://github.com/nisemono0/yazi-plugins/tree/master/mangathumb.yazi) - Preview the first image inside `zip` files using `p7zip`
 - [move-parentdir.yazi](https://github.com/nisemono0/yazi-plugins/tree/master/move-parentdir.yazi) - Move to next/previous parent directory
 - [open-with-cmd.yazi](https://github.com/nisemono0/yazi-plugins/tree/master/open-with-cmd.yazi) - Open file(s) with specified command
+- [simple-mediainfo.yazi](https://github.com/nisemono0/yazi-plugins/tree/master/simple-mediainfo.yazi) - Preview media files using `mediainfo`
 
 ## Installation
 ```
