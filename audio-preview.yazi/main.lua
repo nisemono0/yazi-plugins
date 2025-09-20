@@ -25,7 +25,8 @@ function M:preload(job)
     local sox_command, code = Command("sox")
         :arg({
             tostring(job.file.url),
-            "-n", "spectrogram",
+            "-n", "trim", "0:00", "1:00",
+            "spectrogram",
             "-c", "Yazi (sox)",
             "-o", tostring(cache)
         }):spawn()
